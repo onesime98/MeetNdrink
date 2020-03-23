@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1080023407795",
+    "firebase_url": "https://meetndrink-50153.firebaseio.com",
+    "project_id": "meetndrink-50153",
+    "storage_bucket": "meetndrink-50153.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080023407795:android:7474c2a7755910078ce4c6",
+        "android_client_info": {
+          "package_name": "fr.point.meetndrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080023407795-6npgc7f132vvqe9nbdh3cuk8egsqilc6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrO-4T9jRh9coIobnMzr-W2Y2PzuiPhvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080023407795-6npgc7f132vvqe9nbdh3cuk8egsqilc6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
