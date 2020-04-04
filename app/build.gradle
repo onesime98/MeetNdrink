@@ -8,6 +8,7 @@ android {
         applicationId "fr.point.meetndrink"
         minSdkVersion 16
         targetSdkVersion 29
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -39,6 +40,10 @@ dependencies {
     //firestore cloud, core dependencies
     implementation 'com.google.firebase:firebase-firestore:21.3.0'
     implementation 'com.firebaseui:firebase-ui-firestore:6.1.0'
+
+    //cardview
+    implementation 'com.android.support:appcompat-v7:29.1.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
 
 
 
