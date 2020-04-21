@@ -87,12 +87,7 @@
                 android:layout_margin="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/imageview_profil"
-                    android:src="@drawable/utilisateur"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
                 <TextView
                     android:id="@+id/textview_profil"
                     android:textSize="16sp"
@@ -188,6 +183,15 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageview_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_gravity="center"
+            android:src="@drawable/utilisateur" />
 
     </GridLayout>
     <TextView
