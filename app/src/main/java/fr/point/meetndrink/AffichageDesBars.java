@@ -43,20 +43,20 @@ public class AffichageDesBars extends AppCompatActivity {
 
         adapter = new BarAdapter(options);
 
-        db.collection("bars")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()){
-                            for (QueryDocumentSnapshot document : task.getResult()){
-                                Log.d(TAG, document.getId() + "=>"+ document.getData());
-                            }
-                        }else{
-                            Log.w(TAG, "erreur bdd ", task.getException());
-                        }
-                    }
-                });
+//        db.collection("bars")
+//                .get()
+//                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                        if (task.isSuccessful()){
+//                            for (QueryDocumentSnapshot document : task.getResult()){
+//                                Log.d(TAG, document.getId() + "=>"+ document.getData());
+//                            }
+//                        }else{
+//                            Log.w(TAG, "erreur bdd ", task.getException());
+//                        }
+//                    }
+//                });
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
