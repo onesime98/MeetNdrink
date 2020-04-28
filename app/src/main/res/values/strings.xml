@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MeetnDrink</string>
     <string name="slogan">Parce qu\'un verre ça se partage entre potes...</string>
+    <string name="login"> Login </string>
+    <string name="seconnecter">Se connecter</string>
+    <string name="pasinscris">Pas encore de compte ? Inscrivez vous !</string>
+    <string name="inscription">S\'inscrire</string>
+
+
 </resources>
