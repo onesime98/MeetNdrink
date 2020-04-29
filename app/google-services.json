@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1080023407795-jqs47kes0glho5jeo0500nj5ih38qjvm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fr.point.meetndrink",
+            "certificate_hash": "60fe733cb007e3fa82962999c8d2b85c7d2bd743"
+          }
+        },
+        {
           "client_id": "1080023407795-6npgc7f132vvqe9nbdh3cuk8egsqilc6.apps.googleusercontent.com",
           "client_type": 3
         }
