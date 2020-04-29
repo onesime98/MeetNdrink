@@ -9,11 +9,11 @@ public class Bar {
     private String classification;
 
     //constructeur
-    public Bar(){
+    public Bar() {
         //empty constructor need
     }
 
-    public Bar(String name, String description, String adresse, String numtel, String horaire, String classification){
+    public Bar(String name, String description, String adresse, String numtel, String horaire, String classification) {
         this.name = name;
         this.description = description;
         this.adresse = adresse;

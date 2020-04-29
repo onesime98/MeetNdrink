@@ -39,8 +39,6 @@ public class AffichageDesBars extends AppCompatActivity {
         setContentView(R.layout.activity_affichage_des_bars);
 
 
-
-
         setUpRecyclerView();
     }
 
@@ -49,7 +47,7 @@ public class AffichageDesBars extends AppCompatActivity {
         Query query = barRef.orderBy("classification", Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<Bar> options = new FirestoreRecyclerOptions.Builder<Bar>()
-                .setQuery(query,Bar.class)
+                .setQuery(query, Bar.class)
                 .build();
 
         adapter = new BarAdapter(options);
@@ -59,11 +57,11 @@ public class AffichageDesBars extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()){
-                            for (QueryDocumentSnapshot document : task.getResult()){
-                                Log.d(TAG, document.getId() + "=>"+ document.getData());
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + "=>" + document.getData());
                             }
-                        }else{
+                        } else {
                             Log.w(TAG, "erreur bdd ", task.getException());
                         }
                     }

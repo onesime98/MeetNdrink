@@ -22,8 +22,8 @@ public class BarAdapter extends FirestoreRecyclerAdapter<Bar, BarAdapter.BarHold
         holder.textViewName.setText(model.getName());
         holder.textViewDescription.setText(model.getDescription());
         holder.textViewAdresse.setText(model.getAdresse());
-        holder.textViewNumtel.setText(model.getNumtel());
-        holder.textViewHoraire.setText(model.getHoraire());
+        holder.textViewNumtel.setText("Numéro de tel : " + model.getNumtel());
+        holder.textViewHoraire.setText("Horaire : " + model.getHoraire());
         holder.textViewClassification.setText(model.getClassification());
 
 
@@ -32,11 +32,11 @@ public class BarAdapter extends FirestoreRecyclerAdapter<Bar, BarAdapter.BarHold
     @NonNull
     @Override
     public BarHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v  = LayoutInflater.from(parent.getContext()).inflate(R.layout.bar_item,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.bar_item, parent, false);
         return new BarHolder(v);
     }
 
-    class BarHolder extends RecyclerView.ViewHolder{
+    class BarHolder extends RecyclerView.ViewHolder {
         TextView textViewName;
         TextView textViewDescription;
         TextView textViewAdresse;
