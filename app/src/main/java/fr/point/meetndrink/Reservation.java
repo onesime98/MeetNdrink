@@ -132,6 +132,7 @@ public class Reservation extends AppCompatActivity {
                             nbPersEditText.getText().clear();
                             date.getText().clear();
                             heure.getText().clear();
+                            
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
