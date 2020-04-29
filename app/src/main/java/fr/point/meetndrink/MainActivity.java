@@ -1,5 +1,6 @@
 package fr.point.meetndrink;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         parametres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
             }
         });
