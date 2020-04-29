@@ -29,9 +29,6 @@ public class AffichageDesBars extends AppCompatActivity {
     private CollectionReference barRef = db.collection("bars");
     private BarAdapter adapter;
     private String TAG;
-    Button mBtnShare;
-    Intent mShareIntent;
-    String mShareBody = "VOICI UNE APPLICATION";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
