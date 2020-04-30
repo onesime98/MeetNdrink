@@ -49,7 +49,7 @@ public class SignupActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SignupActivity.this, "You have to fill all properties", Toast.LENGTH_LONG).show();
                 }
-                else if(password.getText().toString()!=confirmpwd.getText().toString()) {
+                else if(!password.equals(confirmpwd)) {
                     Toast.makeText(SignupActivity.this, "Your passwords must be the same", Toast.LENGTH_LONG).show();
                     email.setText("");
                     password.setText("");
