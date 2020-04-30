@@ -1,7 +1,7 @@
 package fr.point.meetndrink;
 
 public class Reservation {
-    private String name;
+    private static String name;
     private String client;
     private String date;
     private String heure;
