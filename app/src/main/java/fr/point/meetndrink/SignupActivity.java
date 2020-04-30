@@ -2,6 +2,7 @@ package fr.point.meetndrink;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +34,9 @@ public class SignupActivity extends AppCompatActivity {
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+        password.setTransformationMethod(new PasswordTransformationMethod());
         confirmpwd = findViewById(R.id.confirmpwd);
+        confirmpwd.setTransformationMethod(new PasswordTransformationMethod());
         email = findViewById(R.id.email);
         signup = findViewById(R.id.btnValid);
 
@@ -47,7 +50,7 @@ public class SignupActivity extends AppCompatActivity {
                 {
                     empty = true;
                 }
-                if(password==confirmpwd && password.length()>=6 && empty==false) {
+                if(password.getText().toString()==confirmpwd.getText().toString() && password.length()>=6 && empty==false) {
                     firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
         userEmail = findViewById(R.id.usermail);
         userPassword = findViewById(R.id.userpassword);
+        userPassword.setTransformationMethod(new PasswordTransformationMethod());
         userLogin = findViewById(R.id.btnLogin);
         userSignup = findViewById(R.id.btnSignup2);
         firebaseAuth = FirebaseAuth.getInstance();
