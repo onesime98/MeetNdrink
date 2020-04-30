@@ -1,5 +1,6 @@
 package fr.point.meetndrink;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +19,14 @@ public class ReservationAdapter extends FirestoreRecyclerAdapter<Reservation, Re
         super(options);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onBindViewHolder(@NonNull ReservationHolder holder, int position, @NonNull Reservation model) {
-        holder.textViewName.setText(model.getName());
-        holder.textViewClient.setText(model.getClient());
-        holder.textViewDate.setText(model.getDate());
-        holder.textViewHeure.setText(model.getHeure());
-        holder.textViewNbpers.setText(model.getNbpers());
+        holder.textViewName.setText("Non du bar : "+model.getName());
+        holder.textViewClient.setText("Nom et prénom : "+model.getClient());
+        holder.textViewDate.setText("Date : "+model.getDate());
+        holder.textViewHeure.setText("Heure : "+model.getHeure());
+        holder.textViewNbpers.setText("Nombre de personnes : "+model.getNbpers());
 
 
 
