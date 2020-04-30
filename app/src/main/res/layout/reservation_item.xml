@@ -1,52 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Cardview xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
     android:layout_marginEnd="8dp"
-    app:cardBackgroundColor="#FFFF8E">
+    app:cardBackgroundColor="@color/colorWhiteDirty">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
 
-    <TextView
-        android:id="@+id/text_view_nombar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombar"
-        android:layout_toStartOf="@id/text_view_heure"
-        android:layout_alignParentStart="true"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_alignParentLeft="false"
-        android:layout_toLeftOf="@id/text_view_heure" />
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Nom du bar : "
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/text_view_heure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Heure"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/textview_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_name"
+            android:text="Client : "
+            android:textSize="18dp"
+            android:textStyle="normal" />
 
-<TextView
-    android:id="@+id/text_view_date"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentLeft="false"
-    android:text="Date"
-    android:layout_below="@id/text_view_nombar"/>
+        <TextView
+            android:id="@+id/textview_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_client"
+            android:text="Date :  "
+            android:textSize="18dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textview_heure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_date"
+            android:text="Heure: "
+            android:textSize="18dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textview_nbpers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_heure"
+            android:text="Nombre de personnes :  "
+            android:textSize="18dp"
+            android:textStyle="italic" />
 
 
-</RelativeLayout>
 
-</android.support.v7.widget.Cardview>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

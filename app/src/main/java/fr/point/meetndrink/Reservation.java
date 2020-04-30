@@ -1,52 +1,65 @@
 package fr.point.meetndrink;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+public class Reservation {
+    private String name;
+    private String client;
+    private String date;
+    private String heure;
+    private String nbpers;
 
-import android.os.Bundle;
-
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
-
-public class Reservation extends AppCompatActivity {
-    private FirebaseFirestore db= FirebaseFirestore.getInstance();
-    private CollectionReference reservationsRef = db.collection("reservations");
-
-    private Reservation2Adapter adapter;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_affichage_reservation);
-
-        setUpRecyclerView();
+    //constructeur
+    public Reservation(){
+        //empty constructor need
     }
-    private void setUpRecyclerView(){
-        Query query = reservationsRef.orderBy("heure",Query.Direction.DESCENDING );
 
-        FirestoreRecyclerOptions<Reservation2> options = new FirestoreRecyclerOptions.Builder<Reservation2>()
-                .setQuery(query,Reservation2.class)
-                .build();
+    public Reservation(String name, String client, String date, String heure, String nbpers){
+        this.name = name;
+        this.client = client;
+        this.date = date;
+        this.heure = heure;
+        this.nbpers = nbpers;
+    }
 
-        adapter = new Reservation2Adapter(options);
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+    public static String getName() {
+        return name;
     }
-    @Override
-    protected  void onStart() {
-        super.onStart();
-        adapter.startListening();
+
+    public void setName(String name) {
+        this.name = name;
     }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        adapter.stopListening();
+
+    public String getClient() {
+        return client;
     }
+
+    public void setClient(String client) {
+        this.client = client;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getHeure() {
+        return heure;
+    }
+
+    public void setHeure(String heure) {
+        this.heure= heure;
+    }
+
+    public String getNbpers() {
+        return nbpers;
+    }
+
+    public void setNbpers(String nbpers) {
+        this.nbpers = nbpers;
+    }
+
+
 }
+
