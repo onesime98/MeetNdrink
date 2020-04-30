@@ -45,12 +45,26 @@ public class SignupActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Boolean empty=false;
-                if(username.getText().toString()=="" || password.getText().toString()=="" ||confirmpwd.getText().toString() =="" || email.getText().toString()=="")
+                if(username.getText().toString().equals("") || password.getText().toString().equals("") || confirmpwd.getText().toString().equals("") || email.getText().toString().equals(""))
                 {
-                    empty = true;
+                    Toast.makeText(SignupActivity.this, "You have to fill all properties", Toast.LENGTH_LONG).show();
                 }
-                if(password.getText().toString()==confirmpwd.getText().toString() && password.length()>=6 && empty==false) {
+                else if(password.getText().toString()!=confirmpwd.getText().toString()) {
+                    Toast.makeText(SignupActivity.this, "Your passwords must be the same", Toast.LENGTH_LONG).show();
+                    email.setText("");
+                    password.setText("");
+                    confirmpwd.setText("");
+                    username.setText("");
+                }else if(password.length()<6)
+                {
+                    Toast.makeText(SignupActivity.this, "Your password needs to be at least 6 characters long !", Toast.LENGTH_SHORT).show();
+                    email.setText("");
+                    password.setText("");
+                    confirmpwd.setText("");
+                    username.setText("");
+                }
+                else
+                {
                     firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -67,21 +81,6 @@ public class SignupActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-                }else if(password.length()<6)
-                {
-                    Toast.makeText(SignupActivity.this, "Your password needs to be at least 6 characters long !", Toast.LENGTH_SHORT).show();
-                    email.setText("");
-                    password.setText("");
-                    confirmpwd.setText("");
-                    username.setText("");
-                }
-                else
-                {
-                    Toast.makeText(SignupActivity.this, "Your passwords must be the same", Toast.LENGTH_LONG).show();
-                    email.setText("");
-                    password.setText("");
-                    confirmpwd.setText("");
-                    username.setText("");
                 }
 
             }
