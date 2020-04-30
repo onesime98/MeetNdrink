@@ -48,17 +48,18 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(username.getText().toString().equals("") || password.getText().toString().equals("") || confirmpwd.getText().toString().equals("") || email.getText().toString().equals(""))
                 {
-                    Toast.makeText(SignupActivity.this, "You have to fill all properties", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignupActivity.this, "Vous devez remplir tous les champs", Toast.LENGTH_LONG).show();
                 }
-                else if(!password.equals(confirmpwd)) {
+                /*else if(!password.equals(confirmpwd)) {
                     Toast.makeText(SignupActivity.this, "Your passwords must be the same", Toast.LENGTH_LONG).show();
                     email.setText("");
                     password.setText("");
                     confirmpwd.setText("");
                     username.setText("");
-                }else if(password.length()<6)
+                }*/
+                else if(password.length()<6)
                 {
-                    Toast.makeText(SignupActivity.this, "Your password needs to be at least 6 characters long !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignupActivity.this, "Votre mot de passe doit avoir au moins 6 caractères!", Toast.LENGTH_LONG).show();
                     email.setText("");
                     password.setText("");
                     confirmpwd.setText("");
@@ -66,7 +67,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
                 else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches())
                 {
-                    Toast.makeText(SignupActivity.this,"You must enter a valid Email adress !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignupActivity.this,"Votre adresse email n'est pas valide !", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
