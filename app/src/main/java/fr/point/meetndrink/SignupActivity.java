@@ -3,6 +3,7 @@ package fr.point.meetndrink;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,11 +58,15 @@ public class SignupActivity extends AppCompatActivity {
                     username.setText("");
                 }else if(password.length()<6)
                 {
-                    Toast.makeText(SignupActivity.this, "Your password needs to be at least 6 characters long !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, "Your password needs to be at least 6 characters long !", Toast.LENGTH_LONG).show();
                     email.setText("");
                     password.setText("");
                     confirmpwd.setText("");
                     username.setText("");
+                }
+                else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches())
+                {
+                    Toast.makeText(SignupActivity.this,"You must enter a valid Email adress !", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
