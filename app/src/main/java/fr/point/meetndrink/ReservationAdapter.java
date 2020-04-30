@@ -22,7 +22,7 @@ public class ReservationAdapter extends FirestoreRecyclerAdapter<Reservation, Re
     @SuppressLint("SetTextI18n")
     @Override
     protected void onBindViewHolder(@NonNull ReservationHolder holder, int position, @NonNull Reservation model) {
-        holder.textViewName.setText("Non du bar : "+model.getName());
+        holder.textViewNombar.setText("Nom du bar : "+model.getNombar());
         holder.textViewClient.setText("Nom et prénom : "+model.getClient());
         holder.textViewDate.setText("Date : "+model.getDate());
         holder.textViewHeure.setText("Heure : "+model.getHeure());
@@ -40,7 +40,7 @@ public class ReservationAdapter extends FirestoreRecyclerAdapter<Reservation, Re
     }
 
     class ReservationHolder extends RecyclerView.ViewHolder{
-        TextView textViewName;
+        TextView textViewNombar;
         TextView textViewClient;
         TextView textViewDate;
         TextView textViewHeure;
@@ -50,7 +50,7 @@ public class ReservationAdapter extends FirestoreRecyclerAdapter<Reservation, Re
         public ReservationHolder(@NonNull View itemView) {
             super(itemView);
 
-            textViewName = itemView.findViewById(R.id.textview_name);
+            textViewNombar = itemView.findViewById(R.id.textview_nombar);
             textViewClient = itemView.findViewById(R.id.textview_client);
             textViewDate = itemView.findViewById(R.id.textview_date);
             textViewHeure = itemView.findViewById(R.id.textview_heure);
