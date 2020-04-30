@@ -1,7 +1,7 @@
 package fr.point.meetndrink;
 
 public class Reservation {
-    private static String nombar;
+    private static String name;
     private String client;
     private String date;
     private String heure;
@@ -12,20 +12,20 @@ public class Reservation {
         //empty constructor need
     }
 
-    public Reservation(String nombar, String client, String date, String heure, String nbpers){
-        this.nombar = nombar;
+    public Reservation(String name, String client, String date, String heure, String nbpers){
+        this.name = name;
         this.client = client;
         this.date = date;
         this.heure = heure;
         this.nbpers = nbpers;
     }
 
-    public static String getNombar() {
-        return nombar;
+    public static String getName() {
+        return name;
     }
 
-    public void setNombar(String nombar) {
-        this.nombar = nombar;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getClient() {

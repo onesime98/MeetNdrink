@@ -14,7 +14,7 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/textview_nombar"
+            android:id="@+id/textview_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -27,7 +27,7 @@
             android:id="@+id/textview_client"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textview_nombar"
+            android:layout_below="@id/textview_name"
             android:text="Client : "
             android:textSize="18dp"
             android:textStyle="normal" />
@@ -58,6 +58,8 @@
             android:text="Nombre de personnes :  "
             android:textSize="18dp"
             android:textStyle="italic" />
+
+
 
 
 

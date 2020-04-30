@@ -39,7 +39,7 @@ public class AffichageDesReservations extends AppCompatActivity {
 
 
     private void setUpRecyclerView() {
-        Query query = reservationsRef.orderBy("heure"+"date", Query.Direction.DESCENDING);
+        Query query = reservationsRef.orderBy("heure", Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<Reservation> options = new FirestoreRecyclerOptions.Builder<Reservation>()
                 .setQuery(query,Reservation.class)
